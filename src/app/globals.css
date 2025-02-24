@@ -8,6 +8,11 @@
   font-family: "Inter", serif;
 }
 
+html,body{
+  background-color: black;
+  scroll-behavior: smooth;
+}
+
 .custom-select option{
   background-color: black;
 }

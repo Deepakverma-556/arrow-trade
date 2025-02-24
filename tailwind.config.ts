@@ -17,6 +17,8 @@ export default {
         customGray:"#4c4c4c",
         customRed:"#d01314",
         customGreen:"#00c11f",
+        lightGray:"#232224",
+        darkGray:"#0f0d10",
       }
     },
   },

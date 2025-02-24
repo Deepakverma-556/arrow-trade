@@ -23,7 +23,7 @@ const Header = () => {
    }, [open]);
   return (
     <>
-      <div className="bg-lightSky max-w-[1440px] mx-auto py-[18px]">
+      <div className="bg-lightSky max-w-[1440px] mx-auto py-[18px] max-md:py-3 max-sm:py-2">
         <Marquee direction="left" pauseOnHover={true}>
           <div className=" flex items-center gap-[60px]">
             {TRADE_LIST.map(function (item: TradeItem, i: number) {
@@ -34,11 +34,11 @@ const Header = () => {
                     i === 0 ? "pl-14" : ""
                   }`}
                 >
-                  <p className="text-base leading-[19.36px] text-black">
+                  <p className="text-base max-md:text-sm max-sm:text-xs leading-[19.36px] text-black">
                     {item.title}
                   </p>
                   <div className="bg-customGray py-1 pl-[11px] pr-[7px] rounded-full flex items-center gap-[6px]">
-                    <p className="text-base leading-[19.36px] text-white">
+                    <p className="text-base max-md:text-sm max-sm:text-xs leading-[19.36px] text-white">
                       {item.stock}
                     </p>
                     <span
@@ -53,14 +53,14 @@ const Header = () => {
           </div>
         </Marquee>
       </div>
-      <div className="max-w-[1220px] mx-auto pt-[21px] pb-5 pl-[88px] pr-10 max-lg:px-10 flex items-center justify-between rounded-full border border-white/15 bg-white/10">
+      <div className="max-w-[1220px] z-20 relative mx-auto max-lg:mx-4 pt-[21px] mt-4 max-md:py-4 max-sm:py-3 max-md:px-4 pb-5 pl-[88px] pr-10 max-lg:px-10 flex items-center justify-between rounded-full border border-white/15 bg-white/10">
         <Link href={"/"}>
           <Image
             height={44}
             width={150}
             src={"/assets/images/webp/logo.webp"}
             alt="logo"
-            className="pointer-events-none"
+            className="pointer-events-none max-md:h-8 max-md:w-28 max-sm:h-6 max-sm:w-20"
           />
         </Link>
         <ul className="flex items-center gap-6 max-lg:hidden">
@@ -76,7 +76,7 @@ const Header = () => {
                 <li>
                   <Link
                     className="text-base hover:text-lightSky transition-all duration-300 leading-[19.36px] text-white/70"
-                    href={obj.link || ''}
+                    href={obj.link || ""}
                   >
                     {obj.title}
                   </Link>
@@ -97,7 +97,7 @@ const Header = () => {
         </div>
         <button
           onClick={() => setOpen(!open)}
-          className="overflow-hidden relative z-50 lg:hidden h-5 w-7 flex flex-col justify-between items-center"
+          className="overflow-hidden relative z-50 lg:hidden h-5 w-7 max-sm:h-4 max-sm:w-5 flex flex-col justify-between items-center"
         >
           <span
             className={`bg-white rounded-md w-full h-1 max-sm:h-[2.5px] block transition-all duration-300 ${
@@ -116,11 +116,11 @@ const Header = () => {
           ></span>
         </button>
         <div
-          className={`w-full h-full bg-black flex-col gap-6 transition-all duration-500 left-0 lg:-top-full z-40 fixed flex justify-center items-center ${
+          className={`w-full h-full bg-black flex-col gap-6 max-md:gap-4 transition-all duration-500 left-0 lg:-top-full z-40 fixed flex justify-center items-center ${
             open ? "top-0 left-0" : "-top-full"
           }`}
         >
-          <ul className="flex flex-col items-center gap-6">
+          <ul className="flex flex-col items-center gap-6 max-md:gap-4">
             {HEADER_LIST.map((obj: HeaderItem, i: number) => (
               <div key={i}>
                 {i === 2 ? (
@@ -131,9 +131,9 @@ const Header = () => {
                   </select>
                 ) : (
                   <li>
-                    <Link
+                    <Link onClick={()=>setOpen(false)}
                       className="text-base hover:text-lightSky transition-all duration-300 leading-[19.36px] text-white/70"
-                      href={obj.link||''}
+                      href={obj.link || ""}
                     >
                       {obj.title}
                     </Link>
@@ -142,11 +142,11 @@ const Header = () => {
               </div>
             ))}
           </ul>
-          <CustomButton
+          <CustomButton customOnClick={()=>setOpen(false)}
             text="Sign Up"
             myClass="border-lightSky rounded-[72px] !text-lightSky px-4 py-4 hover:bg-lightSky hover:shadow-lightSky hover:shadow-[0px_4px_24.6px_0px] hover:!text-black"
           />
-          <CustomButton
+          <CustomButton customOnClick={()=>setOpen(false)}
             text="Login"
             myClass="border-lightSky rounded-[72px] hover:bg-transparent hover:shadow-none hover:!text-white px-[24.5px] py-4 bg-lightSky !text-black shadow-[0px_4px_24.6px_0px] shadow-lightSky"
           />
