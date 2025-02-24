@@ -15,7 +15,7 @@ export default {
       colors: {
         lightSky:"#71ced0",
         customGray:"#4c4c4c",
-        customRed:"#001314",
+        customRed:"#d01314",
         customGreen:"#00c11f",
       }
     },
