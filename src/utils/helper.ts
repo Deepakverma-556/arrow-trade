@@ -24,11 +24,11 @@ export const TRADE_LIST = [
 export const HEADER_LIST = [
     {
         title: "Home",
-        link:"home"
+        link:"#home"
     },
     {
         title: "Learn to trade",
-        link:"learn"
+        link:"#learn"
     },
     {
         title: "Promotions",
@@ -37,10 +37,10 @@ export const HEADER_LIST = [
     },
     {
         title: "Arrowtrade",
-        link:"arrowtrade"
+        link:"#arrowtrade"
     },
     {
         title: "Blog",
-        link:"blog"
+        link:"#blog"
     },
 ]
