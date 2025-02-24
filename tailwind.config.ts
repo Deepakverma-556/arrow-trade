@@ -8,10 +8,16 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      screens: {
+        lg: "1025px",
+        md:"770px",
       },
+      colors: {
+        lightSky:"#71ced0",
+        customGray:"#4c4c4c",
+        customRed:"#001314",
+        customGreen:"#00c11f",
+      }
     },
   },
   plugins: [],
