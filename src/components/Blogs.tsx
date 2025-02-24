@@ -1,13 +1,24 @@
 import { BLOG_CARDS_LIST } from "@/utils/helper";
 import { RightArrow, SearchIcon } from "@/utils/icons";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import React from "react";
 import Description from "./common/Description";
 import CustomButton from "./common/CustomButton";
 
+interface CardItem{
+  image: StaticImageData;
+  imageAlt: string;
+  cardDate: string;
+  buttonText: string;
+  title: string;
+  description: string;
+  profileImage: StaticImageData;
+  profileImageAlt: string;
+  profileName: string;
+}
 const Blogs = () => {
   return (
-    <div>
+    <div className="relative overflow-hidden pb-[180px] max-lg:pb-32 max-md:pb-20 max-sm:pb-12">
       <div className="max-w-[1172px] mx-auto px-4">
         <label
           htmlFor="search"
@@ -22,7 +33,7 @@ const Blogs = () => {
           />
         </label>
         <div className="flex flex-wrap -mx-3 pt-[46px]">
-          {BLOG_CARDS_LIST.map((Obj, i) => (
+          {BLOG_CARDS_LIST.map((Obj:CardItem, i:number) => (
             <div key={i} className="w-1/3 px-3 max-lg:w-1/2 max-sm:w-full pt-6">
               <div className="bg-gradient-to-b h-full from-lightSky/0 to-lightSky/100 cursor-pointer rounded-[10px] overflow-hidden px-[1px] pb-[1px]">
                 <div className="h-full bg-black rounded-[10px]">
@@ -79,6 +90,7 @@ const Blogs = () => {
           myClass="!mx-auto !flex px-[24.85px] py-[16.16px] border-lightSky rounded-[72px] hover:bg-transparent hover:shadow-none hover:!text-white bg-lightSky !text-black shadow-[0px_4px_24.6px_0px] shadow-lightSky mt-10 max-sm:mt-6"
         />
       </div>
+      <div className="absolute h-[237px] w-[237px] rounded-full bg-lightSky -right-28 bottom-72 blur-[130px]"></div>
     </div>
   );
 };

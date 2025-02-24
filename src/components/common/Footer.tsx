@@ -4,6 +4,15 @@ import Link from "next/link";
 import React from "react";
 import Description from "./Description";
 
+interface FooterLinkItem {
+  title: string;
+  link: string;
+}
+interface FooterContentItem {
+  title: string;
+  description: string;
+}
+
 const Footer = () => {
   return (
     <div className="bg-[url(/assets/images/webp/footer-img.webp)] bg-cover bg-no-repeat">
@@ -18,7 +27,7 @@ const Footer = () => {
           />
         </Link>
         <ul className="flex items-center gap-6 pt-[31px]">
-          {FOOTER_LINK_LIST.map((obj, i) => (
+          {FOOTER_LINK_LIST.map((obj: FooterLinkItem, i: number) => (
             <li key={i}>
               <Link
                 href={obj.link}
@@ -30,7 +39,7 @@ const Footer = () => {
           ))}
         </ul>
         <div className="flex gap-[30px] flex-col pt-[30px]">
-          {FOOTER_CONTENT_LIST.map((obj, i) => (
+          {FOOTER_CONTENT_LIST.map((obj: FooterContentItem, i: number) => (
             <div key={i}>
               <p className="font-semibold text-base leading-6 text-white pb-[10px]">
                 {obj.title}
