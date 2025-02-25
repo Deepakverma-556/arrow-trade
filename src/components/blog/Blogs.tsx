@@ -13,6 +13,7 @@ interface CardItem {
   cardDate: string;
   buttonText: string;
   title: string;
+  spanTitle: string;
   description: string;
   profileImage: StaticImageData;
   profileImageAlt: string;
@@ -35,9 +36,9 @@ const Blogs = () => {
   );
 
   const handleShowMore = () => {
-   const nextPage = open < BLOG_CARDS_LIST.length ? open / 3 + 1 : 1;
-   setOpen(nextPage * 6);
-   window.history.pushState(null, "", `?page=${nextPage}`);
+   setOpen(open + 3);
+   const nextPage = Math.floor(open / 3) + 1;
+    window.history.pushState(null, "", `?page=${nextPage}`);
   };
   return (
     <div className="relative overflow-hidden pb-[180px] max-lg:pb-32 max-md:pb-20 max-sm:pb-12">
@@ -68,7 +69,7 @@ const Blogs = () => {
                       <Image
                         src={obj.image}
                         alt={obj.imageAlt}
-                        className="w-full h-[237px] max-sm:h-48 oect-cover pointer-events-none"
+                        className="w-full h-[237px] max-sm:h-48 object-cover pointer-events-none"
                       />
                       <Description
                         text={obj.cardDate}
@@ -87,7 +88,7 @@ const Blogs = () => {
                     </div>
                     <div className="px-5 pb-[39px] max-sm:px-4 max-sm:pb-6">
                       <p className="font-semibold text-xl max-sm:text-lg max-sm:pt-8 leading-[24.2px] text-white pt-[42px]">
-                        {obj.title}
+                        {obj.title} {obj.spanTitle}
                       </p>
                       <Description
                         text={obj.description}
@@ -115,10 +116,8 @@ const Blogs = () => {
         </div>
         <CustomButton
           customOnClick={handleShowMore}
-          text={
-            open < BLOG_CARDS_LIST.length ? "Show all blogs" : "Less blogs"
-          }
-          myClass="!mx-auto !flex px-[24.85px] py-[16.16px] border-lightSky rounded-[72px] hover:bg-transparent hover:shadow-none hover:!text-white bg-lightSky !text-black shadow-[0px_4px_24.6px_0px] shadow-lightSky mt-10 max-sm:mt-6"
+          text={"See All Blogs"}
+          myClass="!mx-auto !flex px-[24.85px] py-[16.16px] border-lightSky rounded-[72px] hover:bg-transparent hover:shadow-none hover:!text-lightSky bg-lightSky !text-black shadow-[0px_4px_24.6px_0px] shadow-lightSky mt-10 max-sm:mt-6"
         />
       </div>
       <div className="absolute h-[237px] w-[237px] rounded-full bg-lightSky -right-28 bottom-72 blur-[130px]"></div>

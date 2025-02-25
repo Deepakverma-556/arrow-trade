@@ -37,8 +37,9 @@ export const RightArrow = () => (
   </svg>
 );
 
-export const Facebook = ({myClass}:SocialIcons) => (
-  <svg className={`${myClass}`}
+export const Facebook = ({ myClass }: SocialIcons) => (
+  <svg
+    className={`${myClass}`}
     width="40"
     height="40"
     viewBox="0 0 40 40"
@@ -171,5 +172,37 @@ export const Linkedin = ({ myClass }: SocialIcons) => (
         <rect width="40" height="40" fill="white" />
       </clipPath>
     </defs>
+  </svg>
+);
+
+export const SwiperRightArrow = () => (
+  <svg
+    width="33"
+    height="30"
+    viewBox="0 0 33 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 14.9999H30M30 14.9999L16.5 1.49988M30 14.9999L16.5 28.4999"
+      stroke="#292929"
+      strokeWidth="3"
+    />
+  </svg>
+);
+
+export const SwiperLeftArrow = () => (
+  <svg
+    width="33"
+    height="30"
+    viewBox="0 0 33 30"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M33 14.9999H3M3 14.9999L16.5 1.49988M3 14.9999L16.5 28.4999"
+      stroke="#292929"
+      strokeWidth="3"
+    />
   </svg>
 );
