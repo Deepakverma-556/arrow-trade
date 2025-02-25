@@ -143,6 +143,78 @@ export const BLOG_CARDS_LIST = [
     profileImageAlt: "kristin",
     profileName: "Kristin Watson",
   },
+  {
+    image: realTimeMarket,
+    imageAlt: "real-time-market",
+    cardDate: "31 Jan 2025",
+    buttonText: "3 min read",
+    title: "Real-Time Market Insights",
+    description:
+      "Stay ahead with AI-driven analytics, real-time news updates, and expert market research to make informed decisions.",
+    profileImage: darrell,
+    profileImageAlt: "darrell",
+    profileName: "Darrell Steward",
+  },
+  {
+    image: advanceTrading,
+    imageAlt: "advance-trading",
+    cardDate: "29 Jan 2025",
+    buttonText: "7 min read",
+    title: "Advanced Trading Platform",
+    description:
+      "Experience lightning-fast execution, customizable charts, and an intuitive interface designed for traders of all levels.",
+    profileImage: jerome,
+    profileImageAlt: "jerome",
+    profileName: "Jerome Bell",
+  },
+  {
+    image: mastering,
+    imageAlt: "mastering",
+    cardDate: "20 Dec 2024",
+    buttonText: "4 min read",
+    title: "Mastering The Markets",
+    description:
+      "Mastering the markets involves developing a comprehensive understanding of how financial markets work, creating.",
+    profileImage: eleanor,
+    profileImageAlt: "eleanor",
+    profileName: "Eleanor Pena",
+  },
+  {
+    image: risk,
+    imageAlt: "risk-management",
+    cardDate: "17 Nov 2024",
+    buttonText: "5 min read",
+    title: "Risk Management In Trading",
+    description:
+      "Risk management is a critical component of successful trading. without effective risk management strategies, traders.",
+    profileImage: leslie,
+    profileImageAlt: "leslie",
+    profileName: "Leslie Alexander",
+  },
+  {
+    image: diversified,
+    imageAlt: "diversified-portfolio",
+    cardDate: "22 Oct 2024",
+    buttonText: "2 min read",
+    title: "Building A Diversified Portfolio",
+    description:
+      "Building a diversified portfolio is an essential strategy for managing risk while aiming for steady returns over time.",
+    profileImage: wade,
+    profileImageAlt: "wade",
+    profileName: "Wade Warren",
+  },
+  {
+    image: psychology,
+    imageAlt: "psychology",
+    cardDate: "27 Sep 2024",
+    buttonText: "6 min read",
+    title: "The Phychology Of Trading",
+    description:
+      "Trading isn’t just about numbers, charts, and market analysis—it’s also a game of emotions and psychology.",
+    profileImage: kristin,
+    profileImageAlt: "kristin",
+    profileName: "Kristin Watson",
+  },
 ];
 
 export const FOOTER_LINK_LIST = [
