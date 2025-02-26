@@ -1,5 +1,5 @@
 "use client";
-import Articals from "@/components/common/Articals";
+import Article from "@/components/common/Article";
 import Blogs from "@/components/blog/Blogs";
 import Footer from "@/components/common/Footer";
 import Hero from "@/components/blog/Hero";
@@ -11,7 +11,7 @@ export default function Home() {
       <Suspense>
         <Hero />
         <Blogs />
-        <Articals />
+        <Article />
         <Footer />
       </Suspense>
     </>

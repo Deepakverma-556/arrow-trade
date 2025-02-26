@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import Heading from "../common/Heading";
+import Heading from "./Heading";
 import { BLOG_CARDS_LIST } from "@/utils/helper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -8,20 +8,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { RightArrow, SwiperLeftArrow, SwiperRightArrow } from "@/utils/icons";
 import Image, { StaticImageData } from "next/image";
-import Description from "../common/Description";
-import CustomButton from "../common/CustomButton";
+import Description from "./Description";
+import CustomButton from "./CustomButton";
 
-interface ArticalsItems{
+interface ArticlesItems {
   myClass?: string;
 }
-const Articals = ({myClass}:ArticalsItems) => {
+const Articles = ({ myClass }: ArticlesItems) => {
   const myCard = BLOG_CARDS_LIST.filter((card) => card.isFeatured);
   const swiperRef = useRef(null);
   return (
-    <div className={`pb-[180px] max-lg:pb-32 max-md:pb-20 max-sm:pb-12 ${myClass}`}>
+    <div
+      className={`pb-[180px] max-lg:pb-32 max-md:pb-20 max-sm:pb-12 ${myClass}`}
+    >
       <Heading
         text="Latest"
-        spanText="Articals"
+        spanText="Articles"
         myClass="text-center pb-[70px] max-lg:pb-10 max-sm:pb-6"
       />
       {myCard.length === 0 ? (
@@ -117,7 +119,7 @@ const Articals = ({myClass}:ArticalsItems) => {
                   <SwiperLeftArrow />
                 </button>
                 <button className="swiper-next size-[60px] transition-all duration-300 hover:bg-white bg-lightSky flex justify-center items-center rounded-full max-lg:hidden xl:absolute right-[45px] top-[45%] -translate-y-1/2 z-20 max-[1400px]:right-0">
-                    <SwiperRightArrow />
+                  <SwiperRightArrow />
                 </button>
               </div>
             )}
@@ -128,4 +130,4 @@ const Articals = ({myClass}:ArticalsItems) => {
   );
 };
 
-export default Articals;
+export default Articles;
