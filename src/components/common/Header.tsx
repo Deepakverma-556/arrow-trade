@@ -54,7 +54,7 @@ const Header = () => {
         </Marquee>
       </div>
       <div className="max-w-[1220px] z-20 xl:backdrop-blur-xl relative mx-auto max-lg:mx-4 pt-[21px] mt-4 max-md:py-4 max-sm:py-3 max-md:px-4 pb-5 pl-[88px] pr-10 max-lg:px-10 flex items-center justify-between rounded-full border border-white/15 bg-white/10">
-          <Link href={"/"}>
+          <Link href={"/blogs"}>
             <Image
               height={44}
               width={150}
