@@ -6,6 +6,8 @@ import Description from "../common/Description";
 import CustomButton from "../common/CustomButton";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import nProgress from "nprogress";
+import "nprogress/nprogress.css";
 
 interface CardItem {
   image: StaticImageData;
@@ -39,7 +41,12 @@ const Blogs = () => {
    setOpen(open + 3);
    const nextPage = Math.floor(open / 3) + 1;
     window.history.pushState(null, "", `?page=${nextPage}`);
+    nProgress.start()
+    setTimeout(() => {
+      nProgress.done()
+    },1000)
   };
+
   return (
     <div className="relative overflow-hidden pb-[180px] max-lg:pb-32 max-md:pb-20 max-sm:pb-12">
       <div className="max-w-[1172px] mx-auto px-4">

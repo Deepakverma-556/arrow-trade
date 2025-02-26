@@ -113,13 +113,11 @@ const Articals = ({myClass}:ArticalsItems) => {
             </Swiper>
             {myCard.length > 3 && (
               <div className="flex justify-center items-center gap-5 max-xl:mt-12">
-                <button className="swiper-prev size-[60px] bg-lightSky flex justify-center items-center rounded-full max-lg:hidden xl:absolute top-[45%] -translate-y-1/2 z-10 left-[45px] max-[1400px]:left-0">
+                <button className="swiper-prev size-[60px] transition-all duration-300 hover:bg-white bg-lightSky flex justify-center items-center rounded-full max-lg:hidden xl:absolute top-[45%] -translate-y-1/2 z-10 left-[45px] max-[1400px]:left-0">
                   <SwiperLeftArrow />
                 </button>
-                <button className="swiper-next size-[60px] bg-lightSky flex justify-center items-center rounded-full max-lg:hidden xl:absolute right-[45px] top-[45%] -translate-y-1/2 z-20 max-[1400px]:right-0">
-                  <span>
+                <button className="swiper-next size-[60px] transition-all duration-300 hover:bg-white bg-lightSky flex justify-center items-center rounded-full max-lg:hidden xl:absolute right-[45px] top-[45%] -translate-y-1/2 z-20 max-[1400px]:right-0">
                     <SwiperRightArrow />
-                  </span>
                 </button>
               </div>
             )}

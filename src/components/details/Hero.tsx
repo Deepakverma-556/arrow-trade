@@ -5,8 +5,15 @@ import CustomButton from "../common/CustomButton";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import { BLOG_CARDS_LIST } from "@/utils/helper";
+import nProgress from "nprogress";
+import "nprogress/nprogress.css";
 
 const Hero = () => {
+  nProgress.start()
+    setTimeout(() => {
+      nProgress.done()
+    }, 1000)
+  
   const { id } = useParams();
   const blogArray = BLOG_CARDS_LIST.filter(
     (obj) =>
