@@ -11,11 +11,14 @@ import Image, { StaticImageData } from "next/image";
 import Description from "../common/Description";
 import CustomButton from "../common/CustomButton";
 
-const Articals = () => {
+interface ArticalsItems{
+  myClass?: string;
+}
+const Articals = ({myClass}:ArticalsItems) => {
   const myCard = BLOG_CARDS_LIST.filter((card) => card.isFeatured);
   const swiperRef = useRef(null);
   return (
-    <div className="pb-[180px] max-lg:pb-32 max-md:pb-20 max-sm:pb-12">
+    <div className={`pb-[180px] max-lg:pb-32 max-md:pb-20 max-sm:pb-12 ${myClass}`}>
       <Heading
         text="Latest"
         spanText="Articals"
