@@ -135,7 +135,7 @@ export const BLOG_CARDS_LIST = [
     profileImage: darrell,
     profileImageAlt: "darrell",
     profileName: "Darrell Steward",
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     image: advanceTrading,
@@ -149,7 +149,7 @@ export const BLOG_CARDS_LIST = [
     profileImage: jerome,
     profileImageAlt: "jerome",
     profileName: "Jerome Bell",
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     image: mastering,
@@ -163,7 +163,7 @@ export const BLOG_CARDS_LIST = [
     profileImage: eleanor,
     profileImageAlt: "eleanor",
     profileName: "Eleanor Pena",
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     image: risk,
@@ -177,7 +177,7 @@ export const BLOG_CARDS_LIST = [
     profileImage: leslie,
     profileImageAlt: "leslie",
     profileName: "Leslie Alexander",
-    isFeatured: true,
+    isFeatured: false,
   },
   {
     image: diversified,

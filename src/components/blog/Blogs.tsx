@@ -121,11 +121,13 @@ const Blogs = () => {
             </div>
           ))}
         </div>
-        <CustomButton
-          customOnClick={handleShowMore}
-          text={"See All Blogs"}
-          myClass="!mx-auto !flex px-[24.85px] py-[16.16px] border-lightSky rounded-[72px] hover:bg-transparent hover:shadow-none hover:!text-lightSky bg-lightSky !text-black shadow-[0px_4px_24.6px_0px] shadow-lightSky mt-10 max-sm:mt-6"
-        />
+        {open < BLOG_CARDS_LIST.length && (
+          <CustomButton
+            customOnClick={handleShowMore}
+            text={"See All Blogs"}
+            myClass="!mx-auto !flex px-[24.85px] py-[16.16px] border-lightSky rounded-[72px] hover:bg-transparent hover:shadow-none hover:!text-lightSky bg-lightSky !text-black shadow-[0px_4px_24.6px_0px] shadow-lightSky mt-10 max-sm:mt-6"
+          />
+        )}
       </div>
       <div className="absolute h-[237px] w-[237px] rounded-full bg-lightSky -right-28 bottom-72 blur-[130px]"></div>
     </div>

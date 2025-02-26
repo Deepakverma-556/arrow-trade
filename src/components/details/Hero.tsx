@@ -57,7 +57,7 @@ const Hero = () => {
                   height={570}
                   src={myArray.image}
                   alt={myArray.imageAlt}
-                  className="xl:absolute right-0 -top-[111px] max-xl:h-[400px] max-xl:w-[450px] max-lg:w-96 max-lg:h-72 max-[900px]:h-64 max-[900px]:w-80 object-cover max-md:mx-auto max-md:mt-8 max-md:h-80 max-sm:h-64 max-md:w-full max-xl:px-3"
+                  className="xl:absolute right-0 -top-[111px] max-xl:h-[400px] h-[570px] max-xl:w-[450px] max-lg:w-96 max-lg:h-72 max-[900px]:h-64 max-[900px]:w-80 object-cover max-md:mx-auto max-md:mt-8 max-md:h-80 max-sm:h-64 max-md:w-full max-xl:px-3"
                 />
               </div>
             </div>
