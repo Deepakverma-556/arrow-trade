@@ -80,9 +80,9 @@ const Blogs = () => {
                       />
                       <Description
                         text={obj.cardDate}
-                        myClass="!text-white max-sm:!text-xs absolute z-20 top-5 right-5"
+                        myClass="!text-white max-sm:!text-xs absolute z-10 top-5 right-5"
                       />
-                      <div className="flex items-center gap-4 max-xl:gap-2 max-lg:gap-8 absolute z-20 left-1/2 -translate-x-1/2 -bottom-5">
+                      <div className="flex items-center gap-4 max-xl:gap-2 max-lg:gap-8 absolute z-10 left-1/2 -translate-x-1/2 -bottom-5">
                         <CustomButton
                           text="Productivity"
                           myClass="!font-normal !text-sm !leading-[21px] rounded-full px-[36.76px] py-[7.34px] border-lightSky !text-white/80 bg-darkGray hover:bg-lightSky hover:shadow-lightSky hover:shadow-[0px_4px_24.6px_0px] hover:!text-black"
